@@ -7,7 +7,7 @@ require.config({
         'angular' :'angular/angular.min',
         'angularRoute' : 'angular-route/angular-route.min',
         'angularLocalStorage' : 'angular-local-storage/angular-local-storage.min',
-        'cryptojslib' : 'cryptojslib/rollups/pbkdf2',
+        'cryptojs' : 'cryptojs/lib/PBKDF2',
         'jquery' : 'jquery/dist/jquery.min',
         'noty': 'noty/js/noty/jquery.noty',
         'noty.themes.default': 'noty/js/noty/themes/default',
@@ -26,8 +26,8 @@ require.config({
             deps: ['angular'],
             exports : 'angularLocalStorage'
         },
-        'cryptojslib' : {
-            exports : 'cryptojslib'
+        'cryptojs' : {
+            exports : 'cryptojs'
         },
         'noty': ['jquery'],
         'noty.themes.default': {
@@ -43,7 +43,7 @@ require.config({
 });
 
 
-require(['require','angular','angularRoute','angularLocalStorage','cryptojslib','noty',
+require(['require','angular','angularRoute','angularLocalStorage','cryptojs','noty',
     'noty.themes.default','noty.layouts.top','bootstrap','app'], function () {
     angular.element(document).ready(function() {
         angular.bootstrap(document, ['mainApp']);
